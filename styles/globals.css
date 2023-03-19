@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+@layer base {
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+}
+
+@layer components {
+  /* .hs-tooltip-content {
+    @apply after:!absolute after:!h-3 after:!w-3 after:!rotate-45 after:!bg-gray-900 after:content-[''] after:dark:!bg-slate-700;
+  } */
+
+  .btn {
+    @apply inline-flex h-auto w-auto !items-center !justify-center !rounded-md !border !align-middle !font-medium !transition-all;
+  }
+  .btn-sm {
+    @apply !py-1.5 !px-2 !text-sm !shadow-sm;
+  }
+  .btn-md {
+    @apply !py-1.5 !px-2.5 !text-[15px] !shadow-sm;
+  }
+  .btn-lg {
+    @apply !py-2 !px-3 !text-lg !shadow;
+  }
+  .btn-base {
+    @apply !border-light-400 !bg-white !text-dark-500 hover:!bg-light-300/70 focus:!border-info-500 focus:!outline-none dark:!border-light-800/25 dark:!bg-dark-700/25 dark:!text-dark-100 dark:hover:!bg-dark-600/50 dark:hover:!text-light-100 dark:focus:!border-info-600;
+  }
+  .btn-ghost {
+    @apply !border-0 !bg-transparent !text-dark-500 !shadow-none hover:!bg-light-300/70 focus:!border-info-500 focus:!outline-none dark:!border-light-800/25 dark:!bg-dark-700/25 dark:!text-dark-100 dark:hover:!bg-dark-600/50 dark:hover:!text-light-100;
+  }
+  .btn-danger {
+    @apply !bg-error-600 !text-error-100 hover:!bg-error-500 focus:!outline-none dark:!border-light-800/25 dark:!bg-dark-700/25 dark:!text-dark-100 dark:hover:!bg-dark-600/50 dark:hover:!text-light-100;
+  }
+  .btn-info {
+    @apply !bg-info-500 !text-info-100 hover:!bg-info-600 dark:!border-light-800/25 dark:!bg-dark-700/25 dark:!text-dark-100 dark:hover:!bg-dark-600/50 dark:hover:!text-light-100;
+  }
+  .input-search {
+    @apply block w-full rounded-md border border-light-300 py-2 px-3 pl-11 text-sm shadow-sm focus:z-10 focus:border-info-500 focus:outline-none focus:ring-0;
+  }
+  .table-search input {
+    @apply rounded-md border border-light-300 text-sm shadow-sm focus:z-10 focus:border-info-500 focus:outline-none focus:ring-0;
+  }
+  .card {
+    @apply flex flex-col rounded-xl border bg-white shadow-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:shadow-slate-700/[.7];
+  }
+  .table-th div {
+    @apply float-left w-[calc(100%-15px)] overflow-hidden text-ellipsis;
+  }
+  .table-footer {
+    @apply rounded-b-xl border-t p-4;
+  }
+  .table-pagination {
+    @apply flex items-center justify-between;
+  }
+  .table-pagination-button {
+    @apply btn btn-base btn-md !rounded-none !px-3 first:ml-0 first:!rounded-l-lg last:!rounded-r-lg;
+  }
+  .table-pagination .table-pagination-button.gridjs-spread {
+    @apply !hidden;
+  }
+}
